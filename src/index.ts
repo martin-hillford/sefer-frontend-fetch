@@ -7,7 +7,7 @@ export {  usePost } from 'hooks/usePost';
 export {  usePostSync } from 'hooks/usePostRequest';
 export {  usePut } from 'hooks/usePut';
 export {  useRequest } from 'hooks/useRequest';
-export type { FetchContextProvider } from 'services/FetchContextProvider';
+export { FetchContextProvider } from 'services/FetchContextProvider';
 export type { FetchContext } from 'types/FetchContext';
 export type { HttpContext } from 'types/HttpContext';
 export type { IFetch } from 'types/IFetch';
