@@ -1,5 +1,5 @@
-import HttpContext from 'types/HttpContext';
-import Response from 'types/Response';
+import { HttpContext } from 'types/HttpContext';
+import { Response } from 'types/Response';
 import { getBody } from './getBody';
 import { getContentType } from './getContentType';
 import { getHeaders } from './getHeaders';
