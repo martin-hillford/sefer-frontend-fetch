@@ -1,0 +1,46 @@
+{
+  "name": "@martin-hillford/sefer-fetch",
+  "description": "Provides a fetch library for all Sefer front-ends. Capable of fetching over http(s) or other channels by a custom implementation of the fetch interface",
+  "version": "1.0.1",
+  "license": "MIT",
+  "author": {
+    "name": "Martin Hillford",
+    "email": "171671237+martin-hillford@users.noreply.github.com"
+  },
+  "files": [
+    "readme.md",
+    "license",
+    "lib/"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martin-hillford/markdown-ts.git"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^6.23.1"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts"
+  },
+  "browserslist": {
+    "production": [ ">0.2%", "not dead", "not op_mini all" ],
+    "development": [ "last 1 chrome version", "last 1 firefox version", "last 1 safari version" ]
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.28.0",
+    "@types/node": "^22.10.1",
+    "@types/react": "^19.1.7",
+    "@vitest/coverage-istanbul": "^3.1.1",
+    "eslint": "^9.28.0",
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.34.0",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.1.1"
+  }
+}
