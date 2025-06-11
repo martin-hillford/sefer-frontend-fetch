@@ -1,7 +1,7 @@
 {
   "name": "@martin-hillford/sefer-fetch",
   "description": "Provides a fetch library for all Sefer front-ends. Capable of fetching over http(s) or other channels by a custom implementation of the fetch interface",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "author": {
     "name": "Martin Hillford",
@@ -21,9 +21,9 @@
     "react-dom": "^19.1.0",
     "react-router-dom": "^6.23.1"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
+  "main": "lib/index.js",
+  "module": "lib/index.mjs",
+  "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts"
   },
