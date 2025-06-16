@@ -3,6 +3,7 @@ import { Response } from 'types/Response';
 import { getBody } from './getBody';
 import { getContentType } from './getContentType';
 import { getHeaders } from './getHeaders';
+import { getResourceUri } from "./getResourceUri";
 
 export function createRequest<TResponse>(request: HttpContext) {
   const { allowExternal, action, body, type = 'json', responseType = 'json', method, config, user, client } = request;
@@ -25,7 +26,4 @@ export function createRequest<TResponse>(request: HttpContext) {
   };
 }
 
-const getResourceUri = (allowExternal: boolean | undefined, action: string, config: { api: string }) => {
-  if (allowExternal === true && action.startsWith('https://')) return action;
-  return action.startsWith('/') ? `${config.api}${action}` : `${config.api}/${action}`;
-};
+

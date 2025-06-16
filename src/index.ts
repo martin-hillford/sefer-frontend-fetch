@@ -5,6 +5,7 @@ export {  useGet } from 'hooks/useGet';
 export {  useGetAsync } from 'hooks/useGetAsync';
 export {  usePost } from 'hooks/usePost';
 export {  usePostSync } from 'hooks/usePostRequest';
+export {  usePostFormData } from 'hooks/usePostFormData';
 export {  usePut } from 'hooks/usePut';
 export {  useRequest } from 'hooks/useRequest';
 export { FetchContextProvider } from 'services/FetchContextProvider';
