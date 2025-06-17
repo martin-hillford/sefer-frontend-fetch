@@ -1,7 +1,7 @@
 {
   "name": "@martin-hillford/sefer-fetch",
   "description": "Provides a fetch library for all Sefer front-ends. Capable of fetching over http(s) or other channels by a custom implementation of the fetch interface",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "license": "MIT",
   "author": {
     "name": "Martin Hillford",

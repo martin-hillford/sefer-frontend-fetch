@@ -13,6 +13,10 @@ export const usePostFormData = () => {
 
         return new Promise((resolve, reject) => {
             const xhr = getXhr(url, headers,onProgress);
+
+            // Add all the required header. This can only be once the request has an 'open state'.
+            setHeaders(xhr, headers);
+
             xhr.onload = function () {
                 if (this.status >= 200 && this.status < 300)  resolve(true);
                 else reject();
@@ -26,11 +30,6 @@ export const usePostFormData = () => {
 const getXhr = (url : string,  headers: { [key: string]: string }, onProgress? : (percentage: number) => void) => {
     const xhr = new XMLHttpRequest();
     xhr.withCredentials = true; // ensure when a server order to set cookies, to set them
-
-    // Add all the required header
-    Object.keys(headers ).forEach(key => {
-        xhr.setRequestHeader(key, headers[key]);
-    });
 
     const onProgressHandler = (event : ProgressEvent<EventTarget>) => {
         if (onProgress && event.lengthComputable) {
@@ -59,3 +58,9 @@ const getXhr = (url : string,  headers: { [key: string]: string }, onProgress? :
     // Cors not supported
     throw new Error('Cross Domain ajax requests are not support by this browser, please use a more recent browser.');
 };
+
+const setHeaders = (xhr: XMLHttpRequest, headers: { [key: string]: string }) => {
+    Object.keys(headers ).forEach(key => {
+        xhr.setRequestHeader(key, headers[key]);
+    });
+}
