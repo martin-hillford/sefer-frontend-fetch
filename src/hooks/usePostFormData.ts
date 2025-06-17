@@ -11,14 +11,14 @@ export const usePostFormData = () => {
         const headers = getHeaders(deviceId, token);
         const url = getResourceUri(allowExternal, action, config)
 
-        return new Promise((resolve, reject) => {
+        return new Promise((resolve : (response : XMLHttpRequest) => void, reject : () => void) => {
             const xhr = getXhr(url, headers,onProgress);
 
             // Add all the required header. This can only be once the request has an 'open state'.
             setHeaders(xhr, headers);
 
             xhr.onload = function () {
-                if (this.status >= 200 && this.status < 300)  resolve(true);
+                if (this.status >= 200 && this.status < 300) resolve(this);
                 else reject();
             };
 

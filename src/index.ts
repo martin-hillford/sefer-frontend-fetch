@@ -1,4 +1,3 @@
-
 export { useDelete } from 'hooks/useDelete';
 export {  useFetchContext } from 'hooks/useFetchContext';
 export {  useGet } from 'hooks/useGet';
@@ -8,6 +7,8 @@ export {  usePostSync } from 'hooks/usePostRequest';
 export {  usePostFormData } from 'hooks/usePostFormData';
 export {  usePut } from 'hooks/usePut';
 export {  useRequest } from 'hooks/useRequest';
+export { useGetWithRefresh } from "./hooks/useGetWithRefresh";
+export { useGetWithState } from "./hooks/useGetWithState";
 export { FetchContextProvider } from 'services/FetchContextProvider';
 export type { FetchContext } from 'types/FetchContext';
 export type { HttpContext } from 'types/HttpContext';
