@@ -17,5 +17,5 @@ export type { IFetch } from 'types/IFetch';
 export type { Request } from 'types/Request';
 export type { Response } from 'types/Response';
 export { uuid } from 'util/uuid';
-
+export { getDeviceId } from 'util/getDeviceId';
 
