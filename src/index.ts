@@ -10,6 +10,7 @@ export {  useRequest } from 'hooks/useRequest';
 export { useGetWithRefresh } from "./hooks/useGetWithRefresh";
 export { useGetWithState } from "./hooks/useGetWithState";
 export { FetchContextProvider } from 'services/FetchContextProvider';
+export { PluginFetchProvider } from 'services/PluginFetchProvider';
 export type { FetchContext } from 'types/FetchContext';
 export type { HttpContext } from 'types/HttpContext';
 export type { IFetch } from 'types/IFetch';
